@@ -8,6 +8,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ site.title }} — {{ site.description }}</title>
   <meta name="description" content="{{ site.description }}" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/stylesheet.css" />
+  {% seo %}
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="profile" src="{{ site.baseurl }}/images/profile.jpg" alt="{{ site.title }} photo" />
+      <h1>{{ site.title }}</h1>
+      <p class="tagline">{{ site.description }}</p>
+      <p class="links">
+        <a href="mailto:{{ site.email }}">Email</a>
+        /
+        <a href="{{ site.baseurl }}{{ site.cv_url }}" target="_blank" rel="noopener">CV</a>
+        {% for s in site.socials %}/ <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% endfor %}
+      </p>
+    </header>
+
+    <main>
+      <section id="bio">
+        <p>
+          I’m {{ site.title }}, working at the intersection of mathematics and physics.
+          I teach at BRAC University (Dhaka) and my interests include non‑commutative geometry,
+          black hole physics, and string cosmology. I’ll start a PhD at the University of New Mexico in Fall 2025.
+        </p>
+      </section>
+
+      <section id="writings">
+        <h2>Writings</h2>
+        {% for group in site.data.writings.groups %}
+          <h3>{{ group.name }}</h3>
+          {% assign sorted = group.items | sort: "date" | reverse %}
+          {% for item in sorted %}
+            <p class="pub">
+              {% if item.link %}
+                <span class="pub-title"><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></span>
+              {% else %}
+                <span class="pub-title">{{ item.title }}</span>
+              {% endif %}
+              <span class="pub-meta"> — {{ item.date }} [{{ item.kind }}]</span>
+            </p>
+          {% endfor %}
+        {% endfor %}
+      </section>
+    </main>
+
+    <footer>
+      <p>© {{ "now" | date: "%Y" }} {{ site.title }}. Template adapted from <a href="https://jonbarron.info" target="_blank" rel="noopener">jonbarron.info</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>
+```html
+---
+# Empty front matter so GitHub Pages processes Liquid
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ site.title }} — {{ site.description }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/stylesheet.css" />
+  {% seo %}
+</head>
+<body>
+  <main class="wrap">
+    <aside class="sidebar">
+      <img class="avatar" src="{{ site.baseurl }}/images/profile.jpg" alt="{{ site.title }} photo" />
+      <h1 class="name">{{ site.title }}</h1>
+      <p class="tagline">{{ site.description }}</p>
+
+      <div class="buttons">
+        <a class="btn" href="mailto:{{ site.email }}">Email</a>
+        <a class="btn" href="{{ site.baseurl }}{{ site.cv_url }}" target="_blank" rel="noopener">CV</a>
+      </div>
+
+      <ul class="socials">
+        {% for s in site.socials %}
+          <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
+
+    <section class="content">
+      <section id="bio" class="section">
+        <h2>Bio</h2>
+        <p>
+          I’m {{ site.title }}, working at the intersection of mathematics and physics.
+          I teach at BRAC University (Dhaka) and my interests include non‑commutative geometry,
+          black hole physics, and string cosmology. I’ll start a PhD at the University of New Mexico in Fall 2025.
+        </p>
+      </section>
+
+      <section id="writings" class="section">
+        <h2>Writings</h2>
+        {% for group in site.data.writings.groups %}
+          <h3 class="group-title">{{ group.name }}</h3>
+          {% assign sorted = group.items | sort: "date" | reverse %}
+          <ul class="list">
+            {% for item in sorted %}
+              <li>
+                {% if item.link %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>
+                {% else %}
+                  <span class="nolink">{{ item.title }}</span>
+                {% endif %}
+                <span class="meta"> — {{ item.date }} [{{ item.kind }}]</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </section>
+
+      <footer class="footer">
+        <span>© {{ site.title }} • {{ "now" | date: "%Y" }}</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
+```html
+---
+# Empty front matter so GitHub Pages processes Liquid
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ site.title }} — {{ site.description }}</title>
+  <meta name="description" content="{{ site.description }}" />
   <link rel="stylesheet" href="/stylesheet.css" />
   {% seo %}
 </head>
@@ -34,9 +166,7 @@
       <section id="bio" class="section">
         <h2>Bio</h2>
         <p>
-          I’m {{ site.title }}, working at the intersection of mathematics and physics.
-          I teach at BRAC University (Dhaka) and my interests include non‑commutative geometry,
-          black hole physics, and string cosmology. I’ll start a PhD at the University of New Mexico in Fall 2025.
+          I’m {{ site.title }}, a senior year undergraduate student majoring in physics at Brac University, Bangladesh. Besides physics, I am deeply passionate about writing and journalism. I work as the news editor at BracU Express (the student-run campus newspaper). This is my writing portfolio. 
         </p>
       </section>
 
