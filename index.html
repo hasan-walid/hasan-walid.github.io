@@ -21,26 +21,32 @@
       <h1 class="name">{{ site.title }}</h1>
       <p class="tagline">{{ site.description }}</p>
 
-      <p class="links">
+      <p class="links primary-links">
         <a href="mailto:{{ site.email }}">Email</a>
         <span class="sep">/</span>
         <a href="{{ site.cv_url | relative_url }}" target="_blank" rel="noopener">CV</a>
+      </p>
+      <p class="links social-links">
         {% for s in site.socials %}
-          <span class="sep">/</span><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>
+          {% unless forloop.first %}<span class="sep">/</span>{% endunless %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>
         {% endfor %}
       </p>
 
       <nav class="sidenav">
-        <a href="{{ site.baseurl }}/">Home</a>
-        <a href="{{ site.baseurl }}/bio/">Bio</a>
-        <a href="{{ site.baseurl }}/writings/">Writings</a>
+        <a href="{{ site.baseurl }}/" class="active">Home</a>
+        <a href="{{ site.baseurl }}/writings/">Writing</a>
       </nav>
     </aside>
 
     <section class="content">
       <section class="section">
-        <h2>Welcome</h2>
-        <p>Thanks for visiting. See <a href="{{ site.baseurl }}/bio/">Bio</a> for my background and <a href="{{ site.baseurl }}/writings/">Writings</a> for my non‑academic pieces.</p>
+        <h2>Bio</h2>
+        <p>
+          I’m Walid Hasan, a senior year undergraduate student majoring in physics at Brac University, Bangladesh. I am currently a research intern at ICTP PWF Physics for Bangladesh, where I am working with Dr Ratul Mahanta on "Time-dependent backgrounds in string theory".
+        </p>
+        <p>
+          Outside physics, I am deeply passionate about writing and journalism. I am the news editor at BracU Express (the student-run campus newspaper). Check out the <b>writings</b> section to see my portfolio.
+        </p>
       </section>
     </section>
   </main>
