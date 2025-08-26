@@ -15,7 +15,7 @@ groups:
       - title: "The life and music of Sayad Azmaine"
         date: "2024-12-21"
         kind: "interview"
-        link: "https://bracuexpress.com/the-life-and-music-of-sayad-azmaine//"
+        link: "https://bracuexpress.com/the-life-and-music-of-sayad-azmaine/"
       - title: "UT Dallas Professor shares insights on USA graduate opportunities"
         date: "2024-11-25"
         kind: "news article"
@@ -79,7 +79,7 @@ groups:
         kind: "editorial"
         link: "https://www.kalerkantho.com/print-edition/sub-editorial/2025/01/16/1469068"
 
-  - name: "Book Reviews"
+  - name: "Book reviews"
     items:
       - title: "The Universality of Loneliness"
         date: ""
