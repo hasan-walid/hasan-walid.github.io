@@ -3,7 +3,7 @@
 # Edit these values. They’re used throughout index.html via Liquid variables.
 
 title: "Walid Hasan"
-description: "Senior year undegraduate physics major at Brac University"
+description: "Writing portfolio — Senior Physics undergrad at Brac University."
 email: "walidsuprov@gmail.com"  # change to your email
 url: "https://hasan-walid.github.io"  # update after you create the repo
 baseurl: ""
@@ -11,9 +11,11 @@ baseurl: ""
 # Buttons/links under your bio
 cv_url: "/files/CV.pdf"
 socials:
-  - { name: "LinkedIn",       url: "https://www.linkedin.com/in/walid-hasan/" }
-  - { name: "Facebook",       url: "https://www.facebook.com/suprov.81" }
-  - { name: "Substack",       url: "https://muktobihongo.substack.com/"}
+  - { name: "LinkedIn", url: "https://www.linkedin.com/in/walid-hasan/" }
+  - { name: "Facebook", url: "https://www.facebook.com/suprov.81" }
+  - { name: "GitHub", url: "https://github.com/hasan-walid" }
+  - { name: "Substack", url: "https://muktobihongo.substack.com/" }
+
 
 # Jekyll settings (GitHub Pages will build this automatically)
 markdown: kramdown
