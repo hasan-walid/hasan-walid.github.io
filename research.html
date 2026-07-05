@@ -1,0 +1,108 @@
+---
+permalink: /research/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research — {{ site.title }}</title>
+  <meta name="description" content="Research interests and projects by {{ site.title }}" />
+  <link rel="stylesheet" href="/stylesheet.css" />
+  {% seo %}
+</head>
+<body>
+  <main class="wrap">
+    <aside class="sidebar">
+      <img class="avatar" src="/images/Walid_Hasan.jpg" alt="{{ site.title }} photo" />
+      <h1 class="name"><a href="/">{{ site.title }}</a></h1>
+      <p class="tagline">{{ site.description }}</p>
+      <p class="email">{{ site.email }}</p>
+
+      <ul class="socials">
+        {% for s in site.socials %}
+          <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% unless forloop.last %}<span>/</span>{% endunless %}</li>
+        {% endfor %}
+      </ul>
+
+      <nav class="menu" aria-label="Main navigation">
+        <a href="/research/" aria-current="page">Research</a>
+        <a href="/writings/">Writings</a>
+        <a href="{{ site.cv_url }}" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </aside>
+
+    <section class="content">
+      <section class="section">
+        <h2>Research</h2>
+        <p>
+          I am interested in theoretical physics, especially string theory, string phenomenology,
+          particle physics, and quantum information.
+        </p>
+
+        <div class="research-item">
+          <h3>Undergraduate Thesis</h3>
+          <p class="meta">BRAC University, 2026</p>
+          <p>
+            <strong>Title:</strong> Warped Compactification in Supergravity: A p-Brane Model.
+          </p>
+          <p>
+            Supervisor: Dr. Ratul Mahanta (USTC, Hefei).
+          </p>
+          <p>
+            <strong>Abstract:</strong> In 4D particle phenomenology beyond the Standard Model,
+            warped compactification of higher dimensional gravity provides a geometric mechanism
+            for generating large hierarchies of 4D physical scales. However, realizing such
+            backgrounds in supergravity is constrained by the Maldacena-Nuñez no-go theorem.
+            Under its assumptions, two-derivative supergravity with positive-energy ingredients
+            obstructs nontrivially warped compactifications to de Sitter or Minkowski space. In
+            string theory, we can evade such a restriction by adding negative tension sources,
+            such as orientifold planes, to the theory. We study the role of negative tension
+            sources for a p-brane model, which can be generalized to a type II supergravity. We
+            explicitly construct the localized source action for this model using
+            Dirac-Born-Infeld and Wess-Zumino terms and match it to the p-brane background with
+            compact internal space. We find that the compactness of the internal space requires an
+            effective negative-tension source. Hence, we get an analogous realization of the
+            mechanism by which orientifold-like negative-tension sources allow warped backgrounds
+            in string theory.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Undergraduate Research Assistant</h3>
+          <p class="meta">BRAC University, December 2025 - May 2026</p>
+          <p>
+            PI: Professor Mahbubul Alam Majumdar (BRAC University). Co-PI: Dr. Ratul Mahanta
+            (USTC, Hefei) and Ahmed Rakin Kamal (Masaryk University).
+          </p>
+          <p>
+            Worked on a project titled "Time Dependent Backgrounds in String Theory and Early
+            Universe Cosmology." Received a grant of 4,000 USD from the Research Seed Grant
+            Initiative of BRAC University.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Research Internship</h3>
+          <p class="meta">ICTP PWF: Physics for Bangladesh, July - October 2025</p>
+          <p>
+            Supervisor: Dr. Ratul Mahanta (USTC, Hefei).
+          </p>
+          <p>
+            Internship report:
+            <a href="https://physicsforbangladesh.org/assets/resources/internships/2025/reports/walid-hasan-report.pdf" target="_blank" rel="noopener">
+              "The anatomy of non-vacuum Kasner branes"
+            </a>.
+          </p>
+          <p>
+            I studied time-dependent backgrounds in string theories and reviewed "Kasner Branes
+            with Arbitrary Signature" by Wafic A. Sabra. I studied differential forms and
+            variational techniques to derive equations of motion from actions and solve
+            non-linear differential equations.
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

@@ -8,45 +8,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ site.title }} — {{ site.description }}</title>
   <meta name="description" content="{{ site.description }}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site.baseurl }}/stylesheet.css" />
+  <link rel="stylesheet" href="/stylesheet.css" />
   {% seo %}
 </head>
 <body>
   <main class="wrap">
     <aside class="sidebar">
-      <img class="avatar" src="{{ site.baseurl }}/images/profile.jpg" alt="{{ site.title }} photo" />
-      <h1 class="name">{{ site.title }}</h1>
+      <img class="avatar" src="/images/Walid_Hasan.jpg" alt="{{ site.title }} photo" />
+      <h1 class="name"><a href="/">{{ site.title }}</a></h1>
       <p class="tagline">{{ site.description }}</p>
+      <p class="email">{{ site.email }}</p>
 
-      <p class="links primary-links">
-        <a href="mailto:{{ site.email }}">Email</a>
-        <span class="sep">/</span>
-        <a href="{{ site.cv_url | relative_url }}" target="_blank" rel="noopener">CV</a>
-      </p>
-      <p class="links social-links">
+
+      <ul class="socials">
         {% for s in site.socials %}
-          {% unless forloop.first %}<span class="sep">/</span>{% endunless %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>
+          <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% unless forloop.last %}<span>/</span>{% endunless %}</li>
         {% endfor %}
-      </p>
+      </ul>
 
-      <nav class="sidenav">
-        <a href="{{ site.baseurl }}/" class="active">Home</a>
-        <a href="{{ site.baseurl }}/writings/">Writing</a>
+      <nav class="menu" aria-label="Main navigation">
+        <a href="/research/">Research</a>
+        <a href="/writings/">Writings</a>
+        <a href="{{ site.cv_url }}" target="_blank" rel="noopener">CV</a>
       </nav>
     </aside>
 
     <section class="content">
-      <section class="section">
-        <h2>Bio</h2>
+      <section id="bio" class="section">
+        <h2>About Me</h2>
         <p>
-          I’m Walid Hasan, a senior year undergraduate student majoring in physics at Brac University, Bangladesh. I am currently a research intern at ICTP PWF Physics for Bangladesh, where I am working with Dr Ratul Mahanta on "Time-dependent backgrounds in string theory".
+          Hi there, I am Walid Hasan, an incoming graduate student in theoretical physics at the
+          University of Manitoba. I will be working with Professor Andrew Frey and Professor
+          Margaret Carrington. I completed my undergraduate degree in physics at BRAC University
+          in Bangladesh. You can read more about my academic work on my
+          <a href="/research/">research page</a>.
         </p>
         <p>
-          Outside physics, I am deeply passionate about writing and journalism. I am the news editor at BracU Express (the student-run campus newspaper). Check out the <b>writings</b> section to see my portfolio.
+          Beyond physics, I am deeply interested in writing and journalism. During my undergraduate
+          years, I was the news editor of my campus newspaper,
+          <a href="https://bracuexpress.com/" target="_blank" rel="noopener">BRACU Express</a>.
+          My work has also appeared in national newspapers in Bangladesh. A selected list is
+          available on my <a href="/writings/">writings page</a>.
         </p>
+        <p>
+          I currently write about history, politics, and books on my Substack.
+        </p>
+        <div class="embed embed-small">
+          <iframe src="https://muktobihongo.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
+        </div>
       </section>
     </section>
   </main>

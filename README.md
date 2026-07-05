@@ -1,6 +1,6 @@
-# Personal site — Jon Barron style (GitHub Pages)
+# Walid Hasan Personal Site
 
-This repo hosts my personal site, built as a minimal single page inspired by [jonbarron.github.io].
+This repo hosts my personal website on GitHub Pages.
 
 ## Getting started
 1) Create a public repo named `<your-username>.github.io`.
@@ -9,8 +9,8 @@ This repo hosts my personal site, built as a minimal single page inspired by [jo
 
 ## Customize
 - Edit `_config.yml` for name, bio line, email, CV link, and socials.
-- Replace `images/profile.jpg` and `files/CV.pdf` with your own.
-- Add or edit articles in `data/writings.yml` — they show up automatically on the homepage.
+- Replace `images/Walid_Hasan.jpg` and `files/CV_july_2026.pdf` when updating the profile photo or CV.
+- Add or edit articles in `_data/writings.yml`; they show up automatically on the writings page.
 
 ## Custom domain (optional)
 - Add a `CNAME` file with your domain (e.g., `example.com`).
