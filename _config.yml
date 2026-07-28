@@ -9,7 +9,7 @@ url: "https://hasan-walid.github.io"  # update after you create the repo
 baseurl: ""
 
 # Buttons/links under your bio
-cv_url: "/files/CV_july_2026.pdf"
+# cv_url: "/files/CV_july_2026.pdf"
 socials:
   - { name: "linkedin",       url: "https://www.linkedin.com/in/walid-hasan/" }
   - { name: "github",         url: "https://github.com/hasan-walid" }
