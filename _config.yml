@@ -3,7 +3,7 @@
 # Edit these values. They’re used throughout index.html via Liquid variables.
 
 title: "Walid Hasan"
-description: "Incoming graduate student at University of Manitoba"
+description: "theoretical physics graduate student at University of Manitoba"
 email: "hasanw [at] myumanitoba [dot] ca"
 url: "https://hasan-walid.github.io"  # update after you create the repo
 baseurl: ""
